@@ -12,6 +12,10 @@ class KodeinUploadRootPlugin : Plugin<Project> {
         private val repositoryId = (project.properties["org.kodein.sonatype.repositoryId"] as String?) ?: System.getenv("SONATYPE_REPOSITORY_ID")
         internal val snapshot: Boolean = (project.properties["snapshot"] as? String) == "true"
 
+        init {
+            project.logger.warn("snapshot: $snapshot | ${project.properties["snapshot"]}")
+        }
+
         val repositoryUrl: String by lazy {
             when {
                 snapshot -> "https://oss.sonatype.org/content/repositories/snapshots/"

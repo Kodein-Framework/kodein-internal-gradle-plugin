@@ -20,7 +20,7 @@ buildscript {
 
 allprojects {
     group = "org.kodein.internal.gradle"
-    version = "6.5.0-kotlin-1.5-M2-SNAPSHOT"
+    version = "6.5.0-kotlin-1.5.0-M2-SNAPSHOT"
 }
 
 repositories {
